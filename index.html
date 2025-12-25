@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Family Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>👨‍👩‍👧‍👦 Family Chat</h1>
+    <div id="user-info">
+      <span id="user-email"></span>
+      <button id="signout-btn" style="display:none;">Sign out</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Auth forms -->
+    <section id="auth-section">
+      <div class="card">
+        <h2>Login</h2>
+        <input id="login-email" type="email" placeholder="Email" />
+        <input id="login-password" type="password" placeholder="Password" />
+        <button id="login-btn">Log in</button>
+      </div>
+
+      <div class="card">
+        <h2>Sign up</h2>
+        <input id="signup-email" type="email" placeholder="Email" />
+        <input id="signup-password" type="password" placeholder="Password (min 6 chars)" />
+        <button id="signup-btn">Create account</button>
+      </div>
+
+      <p id="auth-error" class="error"></p>
+    </section>
+
+    <!-- Chat UI -->
+    <section id="chat-section" style="display:none;">
+      <ul id="messages"></ul>
+
+      <form id="message-form">
+        <input id="message-input" type="text" placeholder="Type a message…" maxlength="500" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Firebase v10 modular SDK via CDN; use <script type="module"> imports in app.js -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
