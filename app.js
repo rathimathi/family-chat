@@ -127,7 +127,7 @@ messageForm.addEventListener("submit", async (e) => {
     await addDoc(collection(db, "messages"), {
       text,
       uid: user.uid,
-      displayName: user.email,
+      displayName: maskEmail(user.email),
       createdAt: serverTimestamp()
     });
     messageInput.value = "";
