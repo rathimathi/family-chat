@@ -150,3 +150,14 @@ function escapeHTML(str) {
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
   );
 }
+
+function maskEmail(email) {
+  if (!email || !email.includes("@")) return "User";
+  const [local, domain] = email.split("@");
+  if (local.length <= 2) {
+    return local[0] + "***@" + domain;
+  }
+
+  // Show first 2 chars, mask the rest of local part
+  return local.slice(0, 2) + "***@" + domain;
+}
