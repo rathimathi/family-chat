@@ -1,24 +1,26 @@
 
 // app.js (use ES modules)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import {
   getAuth, onAuthStateChanged,
   signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut
-} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 import {
   getFirestore, collection, addDoc, serverTimestamp,
   query, orderBy, limit, onSnapshot
-} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
-// 1) Paste your Firebase config here (example structure; use YOUR values)
+
+// 1) Paste your Firebase config here
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
-};
+    apiKey: "AIzaSyDqsuTeyV8JtU75Ni3q7iCJ8AfEgPEyq0g",
+    authDomain: "family-chat-f165e.firebaseapp.com",
+    projectId: "family-chat-f165e",
+    storageBucket: "family-chat-f165e.firebasestorage.app",
+    messagingSenderId: "154131560292",
+    appId: "1:154131560292:web:4bb8e9ac016209054bac71",
+    measurementId: "G-FK2GTHVCH1"
+  };
 
 // 2) Init Firebase services
 const app = initializeApp(firebaseConfig);
